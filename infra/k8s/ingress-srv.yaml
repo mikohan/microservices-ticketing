@@ -7,13 +7,13 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
   rules:
-    - host: posts.com
+    - host: ticketing.dev
       http:
         paths:
-          - path: /posts/create
+          - path: /api/users/?(.*)
             pathType: Prefix
             backend:
               service:
-                name: posts-clusterip-srv
+                name: auth-srv
                 port:
-                  number: 4000
+                  number: 3000
