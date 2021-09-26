@@ -8,6 +8,7 @@ import { signoutRouter } from './routs/signout';
 import { errorHandler } from './middlewares/error-handler';
 import { NotFoundError } from './errors/not-found-error';
 import mongoose from 'mongoose';
+// Comment
 
 const app = express();
 
