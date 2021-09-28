@@ -1,4 +1,5 @@
 import { CustomError } from './custom-error';
+// Comment
 
 export class BadRequestError extends CustomError {
   statusCode = 400;
