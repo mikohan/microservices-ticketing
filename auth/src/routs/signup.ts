@@ -42,7 +42,7 @@ router.post(
         id: user.id,
         email: user.email,
       },
-      'sdsd'
+      process.env.JWT_KEY as string
     );
 
     // Store it on session object
