@@ -4,10 +4,13 @@ import { app } from '../app';
 
 let mongo: any;
 beforeAll(async () => {
+  process.env.JWT_KEY = 'asdfasdf';
+
   mongo = new MongoMemoryServer();
+  await mongo.start();
   const mongoUri = await mongo.getUri();
 
-  await mongoose.connect(mongoUri, {});
+  await mongoose.connect(mongoUri);
 });
 
 beforeEach(async () => {
@@ -20,5 +23,5 @@ beforeEach(async () => {
 
 afterAll(async () => {
   await mongo.stop();
-  await mongo.connection.close();
+  await mongoose.connection.close();
 });
