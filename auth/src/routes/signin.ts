@@ -9,7 +9,7 @@ import jwt from 'jsonwebtoken';
 const router = express.Router();
 
 router.post(
-  '/api/users/singnin',
+  '/api/users/signin',
   [
     body('email').isEmail().withMessage('Email must be valid'),
     body('password')
