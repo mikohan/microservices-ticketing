@@ -6,15 +6,19 @@ const Signup = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { doRequest, errors } = useRequest('/api/users/signup', 'post', {
-    email,
-    password,
+  const { doRequest, errors } = useRequest({
+    url: '/api/users/signup',
+    method: 'post',
+    body: {
+      email,
+      password,
+    },
     onSuccess: () => router.push('/'),
   });
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    doRequest();
+    await doRequest();
   };
   return (
     <div className="container">
