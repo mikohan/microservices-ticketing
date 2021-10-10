@@ -6,7 +6,9 @@ it('has a router handler listening on /app/tickets for post request', async () =
 
   expect(response.status).not.toEqual(404);
 });
-it('can only assessed if the user is signed in', async () => {});
+it('can only assessed if the user is signed in', async () => {
+  await request(app).post('/api/tickets').send({}).expect(401);
+});
 it('returns an error if an invalid title is provided', async () => {});
 it('returns an error if an invalid price is provided', async () => {});
 it('creates a ticket with valid inputs', async () => {});

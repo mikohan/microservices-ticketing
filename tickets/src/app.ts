@@ -5,7 +5,11 @@ import cookieSession from 'cookie-session';
 
 import { createTicketRouter } from './routes/new';
 
-import { errorHandler, NotFoundError } from '@angara_digital/common';
+import {
+  errorHandler,
+  NotFoundError,
+  currentUser,
+} from '@angara_digital/common';
 // Comment
 
 const app = express();
@@ -18,6 +22,7 @@ app.use(
     secure: process.env.NODE_ENV !== 'test',
   })
 );
+app.use(currentUser);
 
 app.use(createTicketRouter);
 
