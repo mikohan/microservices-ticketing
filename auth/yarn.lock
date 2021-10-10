@@ -2,6 +2,19 @@
 # yarn lockfile v1
 
 
+"@angara_digital/common@^1.0.4":
+  "integrity" "sha512-HxQ0bpLqhzcFkkvejDqf4XRJ0HbK02GfEUHXvwYeVk+Pwpo8QVG6OuOwcXONXBx5z/SweiC8MaxLFR5VH2SJxw=="
+  "resolved" "https://registry.npmjs.org/@angara_digital/common/-/common-1.0.4.tgz"
+  "version" "1.0.4"
+  dependencies:
+    "@types/cookie-session" "^2.0.43"
+    "@types/express" "^4.17.13"
+    "@types/jsonwebtoken" "^8.5.5"
+    "cookie-session" "^1.4.0"
+    "express" "^4.17.1"
+    "express-validator" "^6.12.2"
+    "jsonwebtoken" "^8.5.1"
+
 "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.14.5":
   "integrity" "sha512-9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndmJicPJhKAwYRI6UfFw=="
   "resolved" "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.14.5.tgz"
@@ -1516,10 +1529,10 @@
   "resolved" "https://registry.npmjs.org/express-async-errors/-/express-async-errors-3.1.1.tgz"
   "version" "3.1.1"
 
-"express-validator@^6.12.1":
-  "integrity" "sha512-olpTAv0ZB5IhNuDQ2rodKAuJsewgFgLIsczJMAWD6T0Yvxsa+j/Hk61jl8e26lAq+oJr6hUqPRjdlOBKhFlWeQ=="
-  "resolved" "https://registry.npmjs.org/express-validator/-/express-validator-6.12.1.tgz"
-  "version" "6.12.1"
+"express-validator@^6.12.1", "express-validator@^6.12.2":
+  "integrity" "sha512-UMVck7ZWrKH7eX75CRYk/pAc9jxZk8Ddsdkukw1R7LTWuQNiDaooz6nVfIdg33qZUHCuv2m2o+RS4pTMaLjGmA=="
+  "resolved" "https://registry.npmjs.org/express-validator/-/express-validator-6.12.2.tgz"
+  "version" "6.12.2"
   dependencies:
     "lodash" "^4.17.21"
     "validator" "^13.5.2"
