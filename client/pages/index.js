@@ -9,6 +9,7 @@ const Index = ({ currentUser }) => {
 };
 
 export const getServerSideProps = async (context) => {
+  console.log('IN LANDING PAGE');
   const { data } = await buildClient(context).get('/api/users/currentuser');
 
   return {
