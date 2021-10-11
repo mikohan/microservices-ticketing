@@ -3,9 +3,9 @@
 
 
 "@angara_digital/common@^1.0.4":
-  "integrity" "sha512-HxQ0bpLqhzcFkkvejDqf4XRJ0HbK02GfEUHXvwYeVk+Pwpo8QVG6OuOwcXONXBx5z/SweiC8MaxLFR5VH2SJxw=="
-  "resolved" "https://registry.npmjs.org/@angara_digital/common/-/common-1.0.4.tgz"
-  "version" "1.0.4"
+  "integrity" "sha512-QbpXrTfY6LOyfzQyd5wr41imocnA1fPr1YtWZYdMKrzg4aDrV+7CyN2BMTFeUc3GSuRQqtiWfsQCbpWXgKe7bw=="
+  "resolved" "https://registry.npmjs.org/@angara_digital/common/-/common-1.0.5.tgz"
+  "version" "1.0.5"
   dependencies:
     "@types/cookie-session" "^2.0.43"
     "@types/express" "^4.17.13"
