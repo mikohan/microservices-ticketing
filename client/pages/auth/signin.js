@@ -15,7 +15,6 @@ const Signup = () => {
     },
     onSuccess: () => router.push('/'),
   });
-  // New comment
 
   const onSubmit = async (e) => {
     e.preventDefault();
