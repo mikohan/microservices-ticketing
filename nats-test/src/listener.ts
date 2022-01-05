@@ -10,6 +10,12 @@ const stan = nats.connect('ticketing', randomBytes(4).toString('hex'), {
 
 stan.on('connect', () => {
   console.log('Listener connected to NATS');
+
+  stan.on('close', ()=>{
+    console.log('Connection closed!');
+    process.exit();
+  })
+
   const subscription = stan.subscribe('ticket:created');
   subscription.on('message', (msg: Message) => {
     const data = msg.getData();
@@ -18,3 +24,6 @@ stan.on('connect', () => {
     }
   });
 });
+
+process.on('SIGINT', ()=> stan.close());
+process.on('SIGTERM', ()=> stan.close());
