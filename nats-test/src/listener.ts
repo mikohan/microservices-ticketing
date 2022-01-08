@@ -1,6 +1,5 @@
 import nats, { Message } from 'node-nats-streaming';
 import { randomBytes } from 'crypto';
-// Some comment for gh
 
 console.clear();
 
