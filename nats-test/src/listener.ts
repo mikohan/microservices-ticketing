@@ -37,7 +37,6 @@ abstract class Listener {
     this.client = client;
   }
 
-  // Some comments
   subscriptionOptions(){
     return this.client
   }
