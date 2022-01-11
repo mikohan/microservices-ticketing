@@ -44,4 +44,11 @@ abstract class Listener {
     .setAckWait(this.ackWait)
     .setDurableName(this.queueGroupName)
   }
+  listen(){
+    const subscription = this.client.subscribe(
+      this.subject,
+      this.queueGroupName,
+      this.subscriptionOptions()
+    )
+  }
 }
