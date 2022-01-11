@@ -56,5 +56,8 @@ abstract class Listener {
       )
     })
   }
+  parseMessage(msg: Message) {
+    const data = msg.getData();
+  }
 
 }
