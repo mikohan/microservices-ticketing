@@ -38,6 +38,10 @@ abstract class Listener {
   }
 
   subscriptionOptions(){
-    return this.client
+    return this.client.subscriptionOptions()
+    .setDeliverAllAvailable()
+    .setManualAckMode(true)
+    .setAckWait(this.ackWait)
+    .setDurableName(this.queueGroupName)
   }
 }
