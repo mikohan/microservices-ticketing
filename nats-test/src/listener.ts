@@ -14,14 +14,7 @@ stan.on("connect", () => {
     console.log("Connection closed!");
     process.exit();
   });
-
-  const subscription = stan.subscribe("ticket:created");
-  subscription.on("message", (msg: Message) => {
-    const data = msg.getData();
-    if (typeof data === "string") {
-      console.log(`Recieved enent #${msg.getSequence()}, with data ${data}`);
-    }
-  });
+  new TicketCreatedListener(stan);
 });
 
 process.on("SIGINT", () => stan.close());
