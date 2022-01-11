@@ -50,5 +50,11 @@ abstract class Listener {
       this.queueGroupName,
       this.subscriptionOptions()
     )
+    subscription.on('message', (msg: Message) => {
+      console.log(
+        `Message received: ${this.subject} / ${this.queueGroupName}`
+      )
+    })
   }
+
 }
