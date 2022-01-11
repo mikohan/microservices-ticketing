@@ -10,15 +10,19 @@ const stan = nats.connect('ticketing', randomBytes(4).toString('hex'), {
   url: 'http://localhost:4222',
 });
 
-stan.on('connect', () => {
+stan.on('connect', async () => {
   console.log('Publisher connected to nats');
 
   const publisher = new TicketCreatedPublisher(stan);
-  publisher.publish({
-    id: '123',
-    title: 'My ticket',
-    price: 20,
-  });
+  try {
+    await publisher.publish({
+      id: '123',
+      title: 'My ticket',
+      price: 20,
+    });
+  } catch (err) {
+    console.error(err);
+  }
 
   // const data = JSON.stringify({
   //   id: '123',
