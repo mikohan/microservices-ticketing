@@ -14,7 +14,7 @@ stan.on("connect", () => {
     console.log("Connection closed!");
     process.exit();
   });
-  new TicketCreatedListener(stan);
+  new TicketCreatedListener(stan).listen();
 });
 
 process.on("SIGINT", () => stan.close());
