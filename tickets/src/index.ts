@@ -10,6 +10,7 @@ const start = async () => {
     throw new Error('MONGO_URI must be defined in kubernetes yaml file');
   }
   try {
+    await natsWrapper.connect('ticketing', 'lslsl', 'http://nats-srv:4222');
     await mongoose.connect(process.env.MONGO_URI, {});
     console.log('Connected to mongoDB');
   } catch (e) {
