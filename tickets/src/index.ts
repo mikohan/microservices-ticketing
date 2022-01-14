@@ -11,6 +11,9 @@ const start = async () => {
   }
   try {
     await natsWrapper.connect('ticketing', 'lslsl', 'http://nats-srv:4222');
+    this._client.on('clese', () => {
+      console.log('NATS connection closed');
+    });
     await mongoose.connect(process.env.MONGO_URI, {});
     console.log('Connected to mongoDB');
   } catch (e) {
