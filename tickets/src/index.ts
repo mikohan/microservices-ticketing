@@ -10,13 +10,14 @@ const start = async () => {
     throw new Error('MONGO_URI must be defined in kubernetes yaml file');
   }
   try {
-    await natsWrapper.connect('ticketing', 'lslsl', 'http://nats-srv:4222');
-    natsWrapper.client.on('clese', () => {
-      console.log('NATS connection closed');
+    await natsWrapper.connect('ticketing', 'alsdkj', 'http://nats-srv:4222');
+    natsWrapper.client.on('close', () => {
+      console.log('NATS connection closed!');
       process.exit();
     });
     process.on('SIGINT', () => natsWrapper.client.close());
     process.on('SIGTERM', () => natsWrapper.client.close());
+
     await mongoose.connect(process.env.MONGO_URI, {});
     console.log('Connected to mongoDB');
   } catch (e) {

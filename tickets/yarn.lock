@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@angara_digital/common@^1.0.4":
-  "integrity" "sha512-9YZpFHAf+YgAYtWbZTUbfkCpP/CUa+kQ9coBgVU04gFAA0QELyI+dIlMG9nV759iFOsqey1s25svBfQKWOiM0w=="
-  "resolved" "https://registry.npmjs.org/@angara_digital/common/-/common-1.0.24.tgz"
-  "version" "1.0.24"
+"@angara_digital/common@^1.0.25":
+  "integrity" "sha512-eZ0u7coFHNnrLm/qDWCxqdazNHdvvO9/XjdL8LtuaA7Ats7+Pyv5V7R9ovDlsu2WUTbkj/f+uUyGDPcx6YXb4A=="
+  "resolved" "https://registry.npmjs.org/@angara_digital/common/-/common-1.0.25.tgz"
+  "version" "1.0.25"
   dependencies:
     "@types/cookie-session" "^2.0.42"
     "@types/express" "^4.17.12"
