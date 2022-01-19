@@ -1,5 +1,5 @@
 import nats, { Stan } from 'node-nats-streaming';
-// Comment added
+
 class NatsWrapper {
   private _client?: Stan;
 
