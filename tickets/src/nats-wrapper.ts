@@ -23,5 +23,5 @@ class NatsWrapper {
     });
   }
 }
-
+// Comment added
 export const natsWrapper = new NatsWrapper();
